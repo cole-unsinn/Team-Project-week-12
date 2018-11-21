@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -228,7 +229,7 @@ namespace ZooScenario
         /// </summary>
         /// <param name="type">The type of animal to find.</param>
         /// <returns>The animal that was found.</returns>
-        public Animal FindAnimal(string type)
+        public Animal FindAnimal(Type type)
         {
             // Define and initialize a result variable.
             Animal result = null;
@@ -237,7 +238,7 @@ namespace ZooScenario
             foreach (Animal a in this.animals)
             {
                 // If the desired animal was found...
-                if (a.Type == type)
+                if (a.GetType() == type)
                 {
                     // Set the variable to point to the current aniimal.
                     result = a;
@@ -257,7 +258,7 @@ namespace ZooScenario
         /// <param name="type">The type of animal to find.</param>
         /// <param name="isPregnant">The pregnancy status of the animal to find.</param>
         /// <returns>The animal that was found.</returns>
-        public Animal FindAnimal(string type, bool isPregnant)
+        public Animal FindAnimal(Type type, bool isPregnant)
         {
             // Define and initialize a result variable.
             Animal result = null;
@@ -266,7 +267,7 @@ namespace ZooScenario
             foreach (Animal a in this.animals)
             {
                 // If the desired animal was found...
-                if (a.Type == type && a.IsPregnant == isPregnant)
+                if (a.GetType() == type && a.IsPregnant == isPregnant)
                 {
                     // Set the variable to point to the current aniimal.
                     result = a;
@@ -286,7 +287,7 @@ namespace ZooScenario
         /// <param name="type">The type of animal to find.</param>
         /// <param name="age">The age of the animal to find.</param>
         /// <returns>The animal that was found.</returns>
-        public Animal FindAnimal(string type, int age)
+        public Animal FindAnimal(Type type, int age)
         {
             // Define and initialize a result variable.
             Animal result = null;
@@ -295,7 +296,7 @@ namespace ZooScenario
             foreach (Animal a in this.animals)
             {
                 // If the desired animal was found...
-                if (a.Type == type && a.Age == age)
+                if (a.GetType() == type && a.Age == age)
                 {
                     // Set the variable to point to the current aniimal.
                     result = a;

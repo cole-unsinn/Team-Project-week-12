@@ -37,11 +37,6 @@ namespace ZooScenario
         private string name;
 
         /// <summary>
-        /// The type of the animal.
-        /// </summary>
-        private string type;
-
-        /// <summary>
         /// The weight of the animal (in pounds).
         /// </summary>
         private double weight;
@@ -52,10 +47,9 @@ namespace ZooScenario
         /// <param name="name">The name of the animal.</param>
         /// <param name="type">The type of the animal.</param>
         /// <param name="weight">The weight of the animal.</param>
-        public Animal(string name, string type, double weight)
+        public Animal(string name, double weight)
         {
             this.name = name;
-            this.type = type;
             this.weight = weight;
         }
 
@@ -66,11 +60,10 @@ namespace ZooScenario
         /// <param name="name">The name of the animal.</param>
         /// <param name="type">The type of the animal.</param>
         /// <param name="weight">The weight of the animal.</param>
-        public Animal(int age, string name, string type, double weight)
+        public Animal(int age, string name, double weight)
         {
             this.age = age;
             this.name = name;
-            this.type = type;
             this.weight = weight;
         }
 
@@ -108,17 +101,6 @@ namespace ZooScenario
         }
 
         /// <summary>
-        /// Gets the type of the animal.
-        /// </summary>
-        public string Type
-        {
-            get
-            {
-                return this.type;
-            }
-        }
-
-        /// <summary>
         /// Gets the weight of the animal (in pounds).
         /// </summary>
         public double Weight
@@ -133,20 +115,20 @@ namespace ZooScenario
         /// Eats the specified food.
         /// </summary>
         /// <param name="food">The food to be eaten.</param>
-        public void Eat(Food food)
+        public virtual void Eat(Food food)
         {
             // Gain weight from eating food.
             this.weight += food.Weight;
 
             // If the animal is a platypus...
-            if (this.Type == "Platypus")
+            if (this.GetType() == typeof(Platypus))
             {
                 // Show affection.
                 this.ShowAffection();
             }
 
             // If the animal is a dingo...
-            if (this.Type == "Dingo")
+            if (this.GetType() == typeof(Dingo))
             {
                 // Bury bone.
                 this.BuryBone(food);
@@ -183,11 +165,11 @@ namespace ZooScenario
             double weight = 0;
 
             // If the animal is a dingo...
-            if (this.Type == "Dingo")
+            if (this.GetType() == typeof(Dingo))
             {
                 weight = this.weight * this.babyDingoWeightPercentage;
             }
-            else if (this.Type == "Platypus")
+            else if (this.GetType() == typeof(Platypus))
             {
                 weight = this.weight * this.babyPlatypusWeightPercentage;
             }
@@ -195,7 +177,7 @@ namespace ZooScenario
             // TODO: Handle invalid animal type.
 
             // Create baby animal.
-            result = new Animal("Baby", this.Type, weight);
+            result = new Animal("Baby", weight);
 
             // Reduce the mother's weight by 1.5 times the baby's weight.
             this.weight -= weight * 1.5;
@@ -206,42 +188,12 @@ namespace ZooScenario
             // Return result.
             return result;
         }
-
-        /// <summary>
-        /// Makes a barking noise.
-        /// </summary>
-        private void Bark()
-        {
-        }
-
-        /// <summary>
-        /// Buries the specified bone.
-        /// </summary>
-        /// <param name="bone">The bone to be buried.</param>
-        private void BuryBone(Food bone)
-        {
-        }
-
-        /// <summary>
-        /// Digs up an existing bone and eats it.
-        /// </summary>
-        private void DigUpAndEatBone()
-        {
-        }
-
         /// <summary>
         /// Feeds a baby animal.
         /// </summary>
         private void FeedNewborn()
         {
             // Feed newborn baby.
-        }
-
-        /// <summary>
-        /// Shows affection.
-        /// </summary>
-        private void ShowAffection()
-        {
         }
     }
 }

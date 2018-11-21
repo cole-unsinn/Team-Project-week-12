@@ -221,16 +221,16 @@ namespace ZooScenario
         /// </summary>
         /// <param name="animalType">The type of animal for which to return the food price.</param>
         /// <returns>The price of food for the specified animal type.</returns>
-        public decimal LookupFoodPrice(string animalType)
+        public decimal LookupFoodPrice(Type animalType)
         {
             // Define and intialize result variable.
             decimal result = 0;
 
-            if (animalType == "Dingo")
+            if (animalType.GetType() == typeof(Dingo))
             {
                 result = this.DingoFoodPrice;
             }
-            else if (animalType == "Platypus")
+            else if (animalType.GetType() == typeof(Platypus))
             {
                 result = this.PlatypusFoodPrice;
             }

@@ -71,12 +71,15 @@
     <Compile Include="Business Classes\VendingMachine.cs" />
     <Compile Include="Business Classes\Wallet.cs" />
     <Compile Include="Business Classes\Zoo.cs" />
+    <Compile Include="Business Classes\Dingo.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business Classes\Mammal.cs" />
+    <Compile Include="Business Classes\Platypus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
