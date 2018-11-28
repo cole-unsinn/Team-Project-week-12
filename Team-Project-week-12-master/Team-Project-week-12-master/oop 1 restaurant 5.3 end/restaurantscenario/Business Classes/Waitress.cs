@@ -186,6 +186,8 @@ namespace RestaurantScenario
                 ticket.AddFoodItem(foodItem);
             }
 
+            
+
             // Give the patron the ticket (which includes the ordered food items.)
             patron.TakeTicketAndMeal(ticket);
 

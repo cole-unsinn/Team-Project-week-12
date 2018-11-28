@@ -23,3 +23,6 @@ C:\Users\CNASI\Downloads\Team-Project-week-12-master\Team-Project-week-12-master
 C:\Users\CNASI\Downloads\Team-Project-week-12-master\Team-Project-week-12-master\oop 1 restaurant 5.3 end\RestaurantScenario\obj\Debug\RestaurantScenario.csproj.GenerateResource.Cache
 C:\Users\CNASI\Downloads\Team-Project-week-12-master\Team-Project-week-12-master\oop 1 restaurant 5.3 end\RestaurantScenario\bin\Debug\RestaurantScenario.exe
 C:\Users\CNASI\Downloads\Team-Project-week-12-master\Team-Project-week-12-master\oop 1 restaurant 5.3 end\RestaurantScenario\bin\Debug\RestaurantScenario.pdb
+D:\Sudoku-Game\Team-Project-week-12\Team-Project-week-12-master\Team-Project-week-12-master\oop 1 restaurant 5.3 end\RestaurantScenario\bin\Debug\RestaurantScenario.exe.config
+D:\Sudoku-Game\Team-Project-week-12\Team-Project-week-12-master\Team-Project-week-12-master\oop 1 restaurant 5.3 end\RestaurantScenario\obj\Debug\RestaurantScenario.exe
+D:\Sudoku-Game\Team-Project-week-12\Team-Project-week-12-master\Team-Project-week-12-master\oop 1 restaurant 5.3 end\RestaurantScenario\obj\Debug\RestaurantScenario.pdb

@@ -197,6 +197,10 @@ namespace RestaurantScenario
             // Find a menu.
             Menu menu = this.FindMenu(menuType);
 
+            Cook owner = this.Owner;
+
+            Patron theregular = this.TheRegular;
+
             // Wait on "The Regular's" table.
             waitress.WaitTable(this.Owner, menu, this.TheRegular);
         }
