@@ -84,7 +84,7 @@ namespace ZooScenario
             decimal foodPrice;
 
             // Set food price.
-            foodPrice = animalSnackMachine.LookupFoodPrice(animal.Type);
+            foodPrice = animalSnackMachine.LookupFoodPrice(typeof(Animal));
 
             // Define a variable to store the payment.
             decimal cashInHand;
@@ -97,13 +97,13 @@ namespace ZooScenario
                 // Define variable to store the food.
                 Food food = null;
 
-                if (animal.Type == "Dingo")
+                if (animal.GetType() == typeof(Dingo))
                 {
                     // Buy dingo food.
                     food = animalSnackMachine.BuyDingoFood(cashInHand);
                 }
 
-                if (animal.Type == "Platypus")
+                if (animal.GetType() == typeof(Platypus))
                 {
                     // Buy platypus food.
                     food = animalSnackMachine.BuyPlatypusFood(cashInHand);

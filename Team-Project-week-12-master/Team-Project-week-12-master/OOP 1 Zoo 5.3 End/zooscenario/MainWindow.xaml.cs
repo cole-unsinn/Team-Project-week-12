@@ -99,7 +99,7 @@ namespace ZooScenario
             double beginningWeight = this.comoZoo.TotalAnimalWeight;
 
             // Find the mother dingo.
-            Animal mother = this.comoZoo.FindAnimal("Dingo", true);
+            Animal mother = this.comoZoo.FindAnimal(typeof(Dingo), true);
 
             // Find the vet.
             Employee vet = this.comoZoo.FindEmployee("Flora");
@@ -125,7 +125,7 @@ namespace ZooScenario
             Guest fred = this.comoZoo.FindGuest("Fred");
 
             // Find a platypus.
-            Animal platypus = this.comoZoo.FindAnimal("Platypus");
+            Animal platypus = this.comoZoo.FindAnimal(typeof(Platypus));
 
             // Call guest.FeedAnimal.
             fred.FeedAnimal(platypus, this.comoZoo.AnimalSnackMachine);
@@ -160,10 +160,10 @@ namespace ZooScenario
             this.comoZoo.AddEmployee(employee);
 
             // Create Brutus and add him to Como Zoo.
-            this.comoZoo.AddAnimal(new Animal("Brutus", "Dingo", 2.25));
+            this.comoZoo.AddAnimal(new Dingo(0, "Brutus", 2.25));
 
             // Create Coco.
-            Animal animal = new Animal(5, "Coco", "Dingo", 25.8);
+            Animal animal = new Dingo(5, "Coco", 25.8);
 
             // Make Coco pregnant.
             animal.MakePregnant();
@@ -172,10 +172,10 @@ namespace ZooScenario
             this.comoZoo.AddAnimal(animal);
 
             // Create Paddy and add him to the Como Zoo.
-            this.comoZoo.AddAnimal(new Animal(3, "Paddy", "Platypus", 15.4));
+            this.comoZoo.AddAnimal(new Platypus(3, "Paddy", 15.4));
 
             // Create Bella.
-            animal = new Animal(6, "Bella", "Dingo", 23.5);
+            animal = new Platypus(6, "Bella", 23.5);
 
             // Make Bella pregnant.
             animal.MakePregnant();
@@ -201,7 +201,7 @@ namespace ZooScenario
             int beginningAnimalCount = this.comoZoo.AnimalCount;
 
             // Find the first baby animal.
-            Animal baby = this.comoZoo.FindAnimal("Dingo", 0);
+            Animal baby = this.comoZoo.FindAnimal(typeof(Dingo), 0);
 
             // Remove the baby from zoo's animal list.
             this.comoZoo.RemoveAnimal(baby);
@@ -224,7 +224,7 @@ namespace ZooScenario
             Guest sally = this.comoZoo.FindGuest("Sally");
 
             // Find a dingo.
-            Animal dingo = this.comoZoo.FindAnimal("Dingo");
+            Animal dingo = this.comoZoo.FindAnimal(typeof(Dingo));
 
             // Call guest.FeedAnimal.
             sally.FeedAnimal(dingo, this.comoZoo.AnimalSnackMachine);
